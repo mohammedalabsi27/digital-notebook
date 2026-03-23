@@ -8,34 +8,6 @@ use Illuminate\Support\Facades\Auth;
 
 class ShopController extends Controller
 {
-    // public function index() 
-    // {
-    //     $shop = Auth::user()->shop ?? new Shop();
-    //     return view('shop.index', compact('shop'));
-    // }
-
-    // public function store(Request $request)
-    // {
-    // $user = Auth::user();
-
-    // // التحقق من صحة البيانات
-    // $validated = $request->validate([
-    //     'name' => ['required', 'string', 'max:255'],
-    //     'address' => ['nullable', 'string', 'max:255'],
-    //     'phone' => ['nullable', 'string', 'max:50'],
-    // ]);
-
-    // // إذا كان المستخدم لا يمتلك محلاً بالفعل، قم بإنشاء محل جديد
-    // if (!$user->shop) {
-    //     $user->shop()->create($validated);
-    //     return to_route('shop.index')->with('success', 'تم إنشاء بيانات المحل بنجاح!');
-    // }
-
-    // // // إذا كان المحل موجودًا، قم بتحديث بياناته
-    // $user->shop->update($validated);
-    // return to_route('shop.index')->with('success', 'تم تحديث بيانات المحل بنجاح!');
-    // }
-
     public function edit()
     {
         $shop = Auth::user()->shop;
